@@ -31,8 +31,11 @@ class PeopleController < ApplicationController
   end
 
   def update
-    @person.update(person_params)
-    flash[:notice] = "#{@person.name} was updated."
+    if @person.update(person_params)
+      flash[:notice] = "#{@person.name} was updated."
+    else
+      flash[:notice] = "Couldn't update the record. Sorry"
+    end
     redirect_to person_path(@person)
   end
 
