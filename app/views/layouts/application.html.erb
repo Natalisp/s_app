@@ -6,12 +6,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,800" rel="stylesheet">
   </head>
 
   <body>
+    <div class="header">
+      <%=link_to (image_tag "pat-logo.svg"), people_path %>
+    </div>
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
     <% end -%>
+    <div class="content">
     <%= yield %>
+    </div>
+    <div class="made-by">
+      Made with
+      <i>♥</i> by
+      <a target="_blank" href="http://www.nataliapat.com/">Natallia Pat</a>
+    </div>
+
   </body>
 </html>

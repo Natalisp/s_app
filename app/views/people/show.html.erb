@@ -1,4 +1,8 @@
-<h2>You just added <%= @person.name %> who loves <%= @person.favoriteCity%> to your <%= link_to "people", people_path %> </h2>
+<div class="center">
 
-<%= link_to "Edit", edit_person_path(@person) %>
-<%= link_to "Delete", person_path(@person), method: :delete %>
+<h2><%= @person.name %> who loves <%= @person.favoriteCity%> is in your <%= link_to "people", people_path %> list.</h2>
+
+<%= link_to "Edit", edit_person_path(@person), :class => 'button green' %>
+<%= link_to "Delete", person_path(@person), method: :delete,:class => 'button' %>
+
+</div>

@@ -1,1 +1,28 @@
-<%= render "form" %>
+<div class="center">
+<%= form_for @person do |f| %>
+
+<% if @person.errors.any? %>
+    <div id="error_explanation">
+      <ul style="list-style-type:none">
+       <% @person.errors.each do |attr, msg| %>
+         <li><%= msg %></li>
+       <% end %>
+      </ul>
+     </div>
+  <% end %>
+
+  <div class="field">
+    <label>Name: </label>
+    <%= f.text_field :name, :title => "Name" %><br>
+  </div>
+ <br>
+  <div class="field">
+    <label>Favorite City: </label>
+    <%= f.text_field :favoriteCity, :title => "City" %><br>
+  </div>
+ <br>
+  <div class="actions">
+   <%= f.submit "Update", :class => 'button cntr' %>
+  </div>
+<% end %>
+</div>

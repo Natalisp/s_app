@@ -1,18 +1,23 @@
-<h2>My people</h2>
 
+<div class="title">
+  <h3>My People</h3>
+</div>
+
+<div class="table">
 <table>
 <tr>
    <th>Name</th>
    <th>Favorite City</th>
+    <th></th>
  </tr>
  <% @people.each do |p| %>
-<tr>
-  <td><%= p.name%></td>
-  <td><%= p.favoriteCity%></td>
-  <td><%= link_to "Edit", edit_person_path(p) %></td>
-</tr>
+  <tr>
+    <td><%= p.name%></td>
+    <td><%= p.favoriteCity%></td>
+    <td><%= link_to "Edit", edit_person_path(p), class: 'button hiding' %></td>
+  </tr>
 <% end %>
 </table>
-
+</div>
 
 <%= render "form" %>

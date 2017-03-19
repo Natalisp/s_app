@@ -1,3 +1,162 @@
 // Place all the styles related to the People controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$white: #FFF;
+$black: rgb(26, 26, 26);
+$green: #00d95a;
+$grey: rgba(255,255,255,0.1);
+$purple: #7c25f8;
+
+
+html {
+	background-color: $black;
+	color: $white;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%
+}
+
+body {
+  width: 100%;
+}
+
+.content {
+  padding-top: 20vh;
+}
+
+h1, h2, h3, h4 {
+	color: $white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform:uppercase;
+}
+
+.header {
+  display: block;
+}
+
+.header img {
+  float: left;
+  width: 5vw;
+  height: 5vw;
+}
+
+.title {
+  display: block;
+  text-align: center;
+}
+
+h2 a {
+  color: $white;
+  font-family: "Montserrat", "Arial", sans-serif;
+    &:hover {
+      color:$purple;
+    }
+}
+
+.button {
+  padding:6px 20px;
+  margin: 0.3vw;
+  border-radius:25px;
+  background:$black;
+  border:1px solid #88898C;
+  color:#DEDFE5;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:3px;
+  font-family:"lato", sans-serif;
+  font-weight: bolder;
+  text-decoration: none;
+     &:hover {
+       border:1px solid $green;
+       transform: scale(1.1);
+     }
+}
+
+.green {
+  background:$green;
+  border:1px solid #648f00;
+    .cntr {
+      margin: auto;
+    }
+}
+
+.button:hover a {
+  transform: scale(1.1);
+}
+
+.field {
+  margin-bottom: 0.5vw;
+}
+
+table {
+  margin: 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50vw;
+  height: 20vh;
+}
+
+th {
+  padding: 1vw;
+  text-align: center;
+  vertical-align:middle;
+  border-bottom: solid 1px $grey;
+  text-transform:uppercase;
+  font-size: 1vw;
+}
+
+td {
+  padding: 1vw;
+  vertical-align:middle;
+  border-bottom: solid 1px $grey;
+  font-weight: lighter;
+  opacity: 0.7;
+  text-decoration: capitalize;
+}
+
+label {
+  font-weight: lighter;
+  margin-right: 1vw;
+}
+
+
+input {
+  font-size: inherit;
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid $grey;
+  margin-right: 1vw;
+  color: $white;
+    &:focus {
+      outline: none;
+    }
+}
+
+.hiding {
+  opacity: 0.3;
+    &:hover {
+      opacity: 1;
+    }
+}
+
+.center {
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50vw;
+  height: 20vh;
+}
+
+.made-by {
+  margin-top: 80vh;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.made-by i {
+  color: red;
+}

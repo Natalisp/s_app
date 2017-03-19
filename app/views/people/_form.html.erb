@@ -1,3 +1,4 @@
+<div class="center">
 <br>
 <br>
 
@@ -15,15 +16,15 @@
 
   <div class="field">
     <label>Name: </label>
-    <%= f.text_field :name, :title => "Name" %><br>
+    <%= f.text_field :name, :title => "Name" %>
   </div>
- <br>
-  <div class="field">
+  <div class="field">  
     <label>Favorite City: </label>
-    <%= f.text_field :favoriteCity, :title => "City" %><br>
+    <%= f.text_field :favoriteCity, :title => "City" %>
   </div>
- <br>
   <div class="actions">
-   <%= f.submit %>
+   <%= f.submit "Add New", :class => 'button green' %>
   </div>
 <% end %>
+
+</div>
