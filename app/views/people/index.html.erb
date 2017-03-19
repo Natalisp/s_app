@@ -1,0 +1,18 @@
+<h2>My people</h2>
+
+<table>
+<tr>
+   <th>Name</th>
+   <th>Favorite City</th>
+ </tr>
+ <% @people.each do |p| %>
+<tr>
+  <td><%= p.name%></td>
+  <td><%= p.favoriteCity%></td>
+  <td><%= link_to "Edit", edit_person_path(p) %></td>
+</tr>
+<% end %>
+</table>
+
+
+<%= render "form" %>
