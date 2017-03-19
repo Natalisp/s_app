@@ -14,22 +14,29 @@ html {
 	background-color: $black;
 	color: $white;
   font-family: 'Montserrat', sans-serif;
-  width: 100%
 }
 
 body {
-  width: 100%;
+  height: 100%;
+	min-height:100%;
+	margin-bottom: 2vh;
 }
 
 .content {
   padding-top: 20vh;
+	padding-bottom:1vh;
 }
 
 h1, h2, h3, h4 {
 	color: $white;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  text-transform:uppercase;
+}
+
+.notice {
+	color: $purple;
+	font-weight: lighter;
+	letter-spacing: 2px;
 }
 
 .header {
@@ -38,13 +45,15 @@ h1, h2, h3, h4 {
 
 .header img {
   float: left;
-  width: 5vw;
-  height: 5vw;
+  width: 7vw;
+  height: 7vw;
 }
 
 .title {
   display: block;
   text-align: center;
+	margin-bottom: 2vw;
+	letter-spacing:2px;
 }
 
 h2 a {
@@ -96,13 +105,19 @@ table {
   height: 20vh;
 }
 
+.table {
+	margin-bottom: 3vw;
+}
+
 th {
   padding: 1vw;
-  text-align: center;
+	text-align: center;
   vertical-align:middle;
   border-bottom: solid 1px $grey;
   text-transform:uppercase;
-  font-size: 1vw;
+	font-size: 12px;
+  letter-spacing:2px;
+	font-weight: normal;
 }
 
 td {
@@ -110,8 +125,12 @@ td {
   vertical-align:middle;
   border-bottom: solid 1px $grey;
   font-weight: lighter;
-  opacity: 0.7;
+  opacity: 0.6;
   text-decoration: capitalize;
+	text-align: center;
+		&:hover {
+			opacity: 1;
+		}
 }
 
 label {
@@ -140,6 +159,8 @@ input {
 }
 
 .center {
+	position: relative;
+	text-align: center;
   margin: auto;
   top: 0;
   right: 0;
@@ -150,11 +171,28 @@ input {
 }
 
 .made-by {
-  margin-top: 80vh;
-  text-align: center;
-  font-size: 1vw;
+  position: absolute;
+	text-align: center;
+	width:100%;
+	height: 2vh;
+  bottom: 0;
+	font-size: 50%;
+
 }
 
-.made-by i {
+.made-by span {
   color: red;
+}
+
+@media only screen and (max-width: 1000px) {
+	.header img { width: 10vw; height: 10vw; }
+}
+
+@media only screen and (max-width: 600px) {
+  body { font-size: 130%; }
+}
+
+@media only screen and (max-width: 600px) {
+	.header { position: fixed; left: 50%; transform: translate(-50%, 0)}
+	.header img { width: 20vw; height: 20vw; float: center; }
 }
