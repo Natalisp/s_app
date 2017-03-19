@@ -1,6 +1,8 @@
 // Place all the styles related to the People controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 $white: #FFF;
 $black: rgb(26, 26, 26);
 $green: #00d95a;
@@ -74,14 +76,10 @@ h2 a {
 
 .green {
   background:$green;
-  border:1px solid #648f00;
     .cntr {
       margin: auto;
     }
-}
 
-.button:hover a {
-  transform: scale(1.1);
 }
 
 .field {
