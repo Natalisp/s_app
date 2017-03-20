@@ -9,8 +9,13 @@
   </head>
 
   <body>
-    <div class="header">
+    <div id="header">
       <%=link_to (image_tag "pat-logo.svg"), people_path %>
+    </div>
+    <div id="guide">
+      <% if request.original_url != 'https://for-sptf.herokuapp.com/guides'%>
+      <%= link_to "Instructions", guides_path %>
+      <% end %>
     </div>
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
@@ -23,6 +28,5 @@
       <span>♥</span> by
       <a target="_blank" href="http://www.nataliapat.com/" id="made-by">Natallia Pat</a>
     </div>
-
   </body>
 </html>

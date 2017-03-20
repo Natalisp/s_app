@@ -7,8 +7,8 @@ $white: #FFF;
 $black: rgb(26, 26, 26);
 $green: #00d95a;
 $grey: rgba(255,255,255,0.1);
+$grey-text: #a9a8a9;
 $purple: #7c25f8;
-
 
 html {
 	background-color: $black;
@@ -38,16 +38,51 @@ h1, h2, h3, h4 {
 	color: $purple;
 	font-weight: lighter;
 	letter-spacing: 2px;
+	text-align: center;
 }
 
-.header {
-  display: block;
+#header {
+  display: inline-block;
+	float: left;
 }
 
-.header img {
-  float: left;
+#header img {
   width: 7vw;
   height: 7vw;
+}
+
+#guide {
+	display: inline-block;
+	float: right;
+	margin: 3vw;
+}
+
+
+#guide a {
+	text-decoration: none;
+	color: $white;
+		&:hover {
+			color: $purple;
+		}
+}
+
+#guides {
+	font-family: sans-serif;
+	color: $grey-text;
+	text-align: left;
+	line-height: 4vh;
+	 	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+#guides h4 {
+	margin: 10px 0 -5px 0;
+}
+
+#data br {
+	line-height:4vh;
 }
 
 .title {
@@ -91,7 +126,7 @@ h2 a {
 
 }
 
-table {
+ table {
 	table-layout: fixed;
   margin: 0 auto;
   top: 0;
@@ -176,6 +211,7 @@ input {
 	width: 30%;
 	float: left;
 	text-align: right;
+	opacity: 0.6;
 }
 
 .edit_person input {
@@ -207,13 +243,70 @@ input {
 	text-align: center;
 	width:100%;
 	height: 2vh;
-  bottom: 0;
+  bottom: 2vh;
 	font-size: 70%;
 }
 
 #made-by {
 	text-decoration: none;
 	color: $white;
+}
+
+.verb-btn.btn-get {
+    background-color: #6DBD2F;
+    color: white;
+}
+
+.verb-btn.btn-post {
+    background-color: #1a9bd0;
+    color: white;
+}
+
+.verb-btn.btn-put {
+    background-color: #e77565;
+    color: white;
+}
+
+.verb-btn.btn-del {
+    background-color: red;
+    color: white;
+}
+
+.verb-btn {
+	margin-top: 2px;
+	margin-bottom: 10px;
+  width: 44px;
+  height: 20px;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  background-color: #cccccc;
+}
+
+.params-table table {
+	width: 50%;
+	height: 10vh;
+	margin: 2vw;
+}
+
+.params-table td {
+	height: 10px;
+	font-size: 1.1vw;
+	padding: 0;
+		&:hover {
+			opacity: 0.6;
+		}
+}
+
+.params-table th {
+	padding: 0;
+	border: none;
+	font-size: 1.1vw;
 }
 
 .made-by span {

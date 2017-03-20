@@ -1,0 +1,109 @@
+<div class="center" id="guides">
+<h3>Application Documentation</h3>
+
+<p>
+  The API is organized around REST. It has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. I used built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. The application supports cross-origin resource sharing, allowing to interact securely with the API from a client-side web application(for the code presentation purpose authentication was simplified). JSON is returned by all API responses. Appending .json extension to the endpoint URL seemed the most sensible option. <br>
+  <br>
+  <strong>API Root Endpoint: </strong>
+  <code>https://for-sptf.herokuapp.com/people/1.json</code>
+  <br>
+</p>
+<p>
+  <br>
+  <strong>Note: </strong>Following the given order of steps in the code challenge requirements, there are some action flow restrictions: person show page can only be accessed after it was created/updated.
+</p>
+<p>
+<h4>Version</h4><br>
+    The current version of the API is v1, the version is NOT part of the URL, so all calls to the API not necessarily include the API version.
+</p>
+<p>
+  <h4>Authentication</h4><br>
+    Authentication is done through an empty session during request.
+</p>
+<p>
+  <h4 style="margin-bottom: 2vw">Resources</h4>
+
+  <div class="verb-btn btn-get">GET</div>
+  <code style="display: inline">&nbsp;&nbsp;/people.json</code>
+  <br>
+  Returns
+  <br>
+  <code>[{"id":2,"name":"Natallia","favoriteCity":"Cape Town"},{"id":1,"name":"Natasha","favoriteCity":"Tokyo"}]</code>
+  <br>
+  <div class="verb-btn btn-post">POST</div>
+  <code style="display: inline">&nbsp;&nbsp;/people.json</code>
+  <br>
+    Request Parameters:
+  <br>
+    <strong>Note: </strong> person key is necessary in order to send a successful request.
+    <div class="params-table">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <tr></tr>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>string</td>
+          <td>required</td>
+        </tr>
+        <tr>
+          <td>favoriteCity</td>
+          <td>string</td>
+          <td>required</td>
+        </tr>
+      </table>
+    </div>
+
+
+    Example <code>{"person":{"name”:”Sean”,”favoriteCity”:”New York”}}</code>
+    <br>
+    If request was successful, application will be redirected to the show page of the new object.
+    <br>
+
+    <div class="verb-btn btn-put">PUT</div>
+    <code style="display: inline">&nbsp;&nbsp;/people/:id</code>
+    <br>
+      Request Parameters:
+    <br>
+      <div class="params-table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <tr></tr>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td>not required</td>
+          </tr>
+          <tr>
+            <td>favoriteCity</td>
+            <td>string</td>
+            <td>not required</td>
+          </tr>
+        </table>
+      </div>
+      Example <code>{"favoriteCity":"Brooklyn"}</code>
+      <br>
+
+    <div class="verb-btn btn-get">GET</div>
+      <code style="display: inline">&nbsp;&nbsp;/people/:id.json</code>
+      <br>
+      Returns
+      <br>
+      <code>[{"id":1,"name":"Sean","favoriteCity":"Brooklyn"}</code>
+    <br>
+
+    <div class="verb-btn btn-del">DELETE</div>
+      <code style="display: inline">&nbsp;&nbsp;/people/:id</code>
+      <br>
+        Request Parameters:
+      <br>
+      <code>Id is required</code> 
+      <br>
+    <br>
+
+</div>
