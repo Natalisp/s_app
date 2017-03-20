@@ -1,4 +1,4 @@
 class Person < ApplicationRecord
-  validates_presence_of :name, :message => "Enter name please"
-  validates_presence_of :favoriteCity, :message => "Enter city please" 
+  validates_presence_of :name, :message => "Name is required"
+  validates_presence_of :favoriteCity, :message => "City is required" 
 end
