@@ -23,10 +23,12 @@
     <div class="content">
     <%= yield %>
     </div>
+    <% if request.original_url != 'https://for-sptf.herokuapp.com/guides'%>
     <div class="made-by">
       Made with
       <span>♥</span> by
       <a target="_blank" href="http://www.nataliapat.com/" id="made-by">Natallia Pat</a>
     </div>
+    <% end %>
   </body>
 </html>
