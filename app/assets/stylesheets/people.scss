@@ -5,10 +5,9 @@
 
 $white: #FFF;
 $black: rgb(26, 26, 26);
-$green: #00d95a;
+$green: #2ebd59;
 $grey: rgba(255,255,255,0.1);
 $grey-text: #a9a8a9;
-$purple: #7c25f8;
 
 html {
 	background-color: $black;
@@ -39,7 +38,7 @@ h1, h2, h3, h4 {
 }
 
 .notice {
-	color: $purple;
+	color: $green;
 	font-weight: lighter;
 	letter-spacing: 2px;
 	text-align: center;
@@ -75,7 +74,7 @@ h1, h2, h3, h4 {
 	text-decoration: none;
 	color: $white;
 		&:hover {
-			color: $purple;
+			color: $green;
 		}
 }
 
@@ -121,7 +120,7 @@ h2 a {
   color: $white;
   font-family: "Montserrat", "Arial", sans-serif;
     &:hover {
-      color:$purple;
+      color:$green;
     }
 }
 
