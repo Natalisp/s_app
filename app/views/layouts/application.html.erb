@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="<%='white' if request.original_url != 'https://for-sptf.herokuapp.com/guides' %>" >
+  <body class="<%='white' if request.original_url == 'https://for-sptf.herokuapp.com/guides' %>">
     <div id="header">
       <%=link_to (image_tag "pat-logo.svg"), people_path %>
     </div>
