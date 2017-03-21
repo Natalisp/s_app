@@ -4,17 +4,9 @@ class PeopleController < ApplicationController
   def index
     @people = Person.all
     @person = Person.new
-    respond_to do |format|
-      format.html { render :index }
-      format.json { render json: @people.to_json(only: [:id, :name, :favoriteCity]) }
-    end
   end
 
   def show
-    respond_to do |format|
-      format.html { render :show }
-      format.json { render json: @person.to_json(only: [:id, :name, :favoriteCity]) }
-    end
   end
 
   def create

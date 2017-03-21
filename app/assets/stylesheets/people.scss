@@ -37,6 +37,10 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
+h3 a {
+	color: $green;
+}
+
 .notice {
 	color: $green;
 	font-weight: lighter;
@@ -69,7 +73,6 @@ h1, h2, h3, h4 {
 	margin: 3vw;
 }
 
-
 #guide a {
 	text-decoration: none;
 	color: $white;
@@ -94,7 +97,7 @@ h1, h2, h3, h4 {
 }
 
 #guides h4, h1 {
-	margin: 10px 0 -5px 0;
+	margin: 15px 0 -10px 0;
 	color: #000;
 }
 
@@ -142,15 +145,18 @@ h2 a {
      }
 }
 
+.button.green {
+	border: 1px solid $green;
+}
+
 .green {
   background:$green;
     .cntr {
       margin: auto;
     }
-
 }
 
- table {
+table {
 	table-layout: fixed;
   margin: 0 auto;
   top: 0;
@@ -174,6 +180,7 @@ th {
 
 td {
 	width: 20%;
+	height: 50px;
   vertical-align:middle;
   border-bottom: solid 1px $grey;
   font-weight: lighter;
