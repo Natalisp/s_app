@@ -1,5 +1,5 @@
 <div class="center" id="guides">
-<h3>Application Documentation</h3>
+<h1>PAT Web API</h1>
 
 <p>
   The API is organized around REST. It has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. I used built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. The application supports cross-origin resource sharing, allowing to interact securely with the API from a client-side web application(for the code presentation purpose authentication was simplified). JSON is returned by all API responses. Appending .json extension to the endpoint URL seemed the most sensible option. <br>
@@ -12,19 +12,22 @@
   <br>
   <strong>Note: </strong>Following the given order of steps in the code challenge requirements, there are some action flow restrictions: person show page can only be accessed after it was created/updated.
 </p>
-<p>
+
 <h4>Version</h4><br>
+<p>
     The current version of the API is v1, the version is NOT part of the URL, so all calls to the API not necessarily include the API version.
 </p>
-<p>
+
   <h4>Authentication</h4><br>
+<p>
     Authentication is done through an empty session during a request.
 </p>
 <br>
-<p>
   <h4 style="margin-bottom: 2vw">Resources and Examples</h4>
-<br>
+  <br>
+  <p>
   - List all people(ID, Name, Favorite City) <br>
+  </p>
   <div class="verb-btn btn-get">GET</div>
   <code style="display: inline">&nbsp;&nbsp;/people.json</code>
   <br>
@@ -33,13 +36,15 @@
   <code>[{"id":2,"name":"Natallia","favoriteCity":"Paris"},{"id":1,"name":"Natasha","favoriteCity":"Tokyo"}]</code>
   <br>
   <br>
+  <p>
   - Create new person <br>
+  </p>
   <div class="verb-btn btn-post">POST</div>
   <code style="display: inline">&nbsp;&nbsp;/people.json</code>
   <br>
-    Request Parameters:
+  <p>Request Parameters:</p>
   <br>
-    <strong>Note: </strong> person key is necessary in order to send a successful request.
+    <p><strong>Note: </strong> person key is necessary in order to send a successful request.</p>
     <div class="params-table">
       <table>
         <tr>
@@ -61,16 +66,18 @@
     </div>
 
 
-    Example <code>{"person":{"name”:”Sean”,”favoriteCity”:”New York”}}</code>
+    <p>Example</p> <code>{"person":{"name”:”Sean”,”favoriteCity”:”New York”}}</code>
     <br>
-    If request was successful, application will be redirected to the show page of the new object.
+    <p>If request was successful, application will be redirected to the show page of the new object.</p>
     <br>
     <br>
+    <p>
    - Update an excisting record <br>
+ </p>
     <div class="verb-btn btn-put">PUT</div>
     <code style="display: inline">&nbsp;&nbsp;/people/:id</code>
     <br>
-      Request Parameters:
+      <p>Request Parameters:</p>
     <br>
       <div class="params-table">
         <table>
@@ -91,23 +98,27 @@
           </tr>
         </table>
       </div>
-      Example <code>{"favoriteCity":"Brooklyn"}</code>
+      <p>Example</p><code>{"favoriteCity":"Brooklyn"}</code>
       <br>
       <br>
+      <p>
     - Retrieve a specific person <br>
+      </p>
     <div class="verb-btn btn-get">GET</div>
       <code style="display: inline">&nbsp;&nbsp;/people/:id.json</code>
       <br>
-      Returns
+      <p>Returns</p>
       <br>
       <code>[{"id":1,"name":"Sean","favoriteCity":"Brooklyn"}</code>
     <br>
     <br>
+    <p>
     - Delete a specific person <br>
+    </p>
     <div class="verb-btn btn-del">DELETE</div>
       <code style="display: inline">&nbsp;&nbsp;/people/:id</code>
       <br>
-        Request Parameters:
+        <p>Request Parameters:<p>
       <br>
       <code>Id is required</code>
       <br>
