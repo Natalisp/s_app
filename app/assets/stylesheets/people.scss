@@ -14,7 +14,7 @@ html {
 	background-color: $black;
 	color: $white;
   font-family: 'Montserrat', sans-serif;
-	font-size: calc(16px + (24 - 16)*(1000vw-400px)/(800-400))
+	font-size: calc(16px + (24 - 16)*(1000vw-400px)/(800-400));
 }
 
 body {
@@ -76,9 +76,11 @@ h1, h2, h3, h4 {
 }
 
 #guides {
+	background: white;
+	height: 100%;
 	font-family: sans-serif;
-	color: $grey-text;
-	text-align: justify;
+	color: #000;
+	text-align: justify;;
 	line-height: 4vh;
 	 	p {
 		margin: 0;

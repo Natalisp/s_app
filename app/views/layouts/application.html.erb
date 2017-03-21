@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color: #FFF" if request.original_url != 'https://for-sptf.herokuapp.com/guides' >
     <div id="header">
       <%=link_to (image_tag "pat-logo.svg"), people_path %>
     </div>
@@ -25,9 +25,8 @@
     </div>
     <% if request.original_url != 'https://for-sptf.herokuapp.com/guides'%>
     <div class="made-by">
-      Made with
-      <span>♥</span> by
       <a target="_blank" href="http://www.nataliapat.com/" id="made-by">Natallia Pat</a>
+      for TTP
     </div>
     <% end %>
   </body>
