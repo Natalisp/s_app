@@ -2,7 +2,7 @@
 
 <h3>You added <br>
   <%= @person.name %> who loves <%= @person.favoriteCity%> <br>
-    to your <%= link_to "people", people_path %> list.</h3>
+    to the <%= link_to "people", people_path %> list.</h3>
 
 <%= link_to "Edit", edit_person_path(@person), :class => 'button green' %>
 <%= link_to "Delete", person_path(@person), method: :delete,:class => 'button' %>

@@ -202,6 +202,7 @@ td {
 	width: 60%;
 	margin: auto;
 	margin-left: 25%;
+	margin-bottom: 30vh;
 }
 
 .new_person label {
@@ -274,11 +275,12 @@ input {
 }
 
 .made-by {
-  position: absolute;
+  position: relative;
 	text-align: center;
 	width:100%;
 	height: 2vh;
   bottom: 2vh;
+	top: 98%;
 	font-size: 2vh;
 }
 
