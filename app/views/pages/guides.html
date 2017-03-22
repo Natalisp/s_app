@@ -21,7 +21,7 @@
     Authentication is not needed in order to explore the API data.
   </p>
   <h4 style="margin-bottom: 2vw">Resources and Examples</h4>
-  - List all people(ID, Name, Favorite City) <br>
+  - List all people <br>
   <div class="verb-btn btn-get">GET</div>
   <code style="display: inline">&nbsp;&nbsp;/api/people</code>
   <br>
@@ -29,7 +29,7 @@
   <code>[{"id":2,"name":"Natallia","favoriteCity":"Paris"},{"id":1,"name":"Natasha","favoriteCity":"Tokyo"}]</code>
   <br>
   <br>
-  - Create new person <br>
+  - Create new person<br>
   <div class="verb-btn btn-post">POST</div>
   <code style="display: inline">&nbsp;&nbsp;/api/people</code>
   <br>
@@ -57,7 +57,7 @@
   <p>Example:<code>{"person":{"name”:”Sean”,”favoriteCity”:”New York”}}</code></p>
   <br>
   <br>
- - Update an excisting record <br>
+ - Update attributes of a person<br>
     <div class="verb-btn btn-put">PUT</div>
     <code style="display: inline">&nbsp;&nbsp;/api/people/:id</code>
     <br>
@@ -83,7 +83,7 @@
       </div>
     <p>Example:<code>{"favoriteCity":"Brooklyn"}</code></p>
     <br>
-- Retrieve a specific person <br>
+- Retrieve a person attributes<br>
     <div class="verb-btn btn-get">GET</div>
       <code style="display: inline">&nbsp;&nbsp;/api/people/:id</code>
       <br>
@@ -91,7 +91,7 @@
       <code>[{"id":1,"name":"Sean","favoriteCity":"Brooklyn"}</code></p>
     <br>
     <br>
-- Delete a specific person <br>
+- Delete a person object<br>
     <div class="verb-btn btn-del">DELETE</div>
       <code style="display: inline">&nbsp;&nbsp;/api/people/:id</code>
       <br>
