@@ -202,7 +202,7 @@ td {
 	width: 60%;
 	margin: auto;
 	margin-left: 25%;
-	margin-bottom: 30vh;
+	padding-bottom: 20vh;
 }
 
 .new_person label {
@@ -287,10 +287,6 @@ input {
 #made-by {
 	text-decoration: none;
 	color: $white;
-}
-
-.made-by span {
-  color: red;
 }
 
 .verb-btn.btn-get {
