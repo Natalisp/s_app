@@ -2,7 +2,7 @@
 <h1>PAT Web API</h1>
   <hr />
   <p>
-    The API is organized around REST. It has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. I used built-in HTTP features, like HTTP authentication and HTTP verbs, which are understood by off-the-shelf HTTP clients. The application supports cross-origin resource sharing, allowing to interact securely with the API from a client-side web application(for the code presentation purpose authentication was simplified). JSON is returned by all API responses.<br>
+    The API is organized around REST. It has predictable, resource-oriented URLs, and uses HTTP response codes to indicate API errors. Built-in HTTP features, like HTTP authentication and HTTP verbs, are understood by off-the-shelf HTTP clients. The application supports cross-origin resource sharing, allowing to interact securely with the API from a client-side web application(for the presentation purpose authentication was simplified). JSON is returned by all API responses.<br>
     <br>
     <strong>API Endpoint: </strong>
     <code style="color: #2ebd59">https://for-sptf.herokuapp.com/api/people/1</code>
@@ -56,7 +56,6 @@
     </div>
   <p>Example:<code>{"person":{"name”:”Sean”,”favoriteCity”:”New York”}}</code></p>
   <br>
-  <p>If request was successful, application will be redirected to the show page of the new object.</p>
   <br>
  - Update an excisting record <br>
     <div class="verb-btn btn-put">PUT</div>
@@ -88,8 +87,8 @@
     <div class="verb-btn btn-get">GET</div>
       <code style="display: inline">&nbsp;&nbsp;/api/people/:id</code>
       <br>
-      <p>Returns</p>
-      <code>[{"id":1,"name":"Sean","favoriteCity":"Brooklyn"}</code>
+      <p>Returns
+      <code>[{"id":1,"name":"Sean","favoriteCity":"Brooklyn"}</code></p>
     <br>
     <br>
 - Delete a specific person <br>
